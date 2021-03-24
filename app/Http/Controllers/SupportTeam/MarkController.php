@@ -198,16 +198,7 @@ class MarkController extends Controller
         /** Test, Exam, Grade **/
         foreach($marks->sortBy('user.name') as $mk){
             $st_id = $all_st_ids[] = $mk->student_id;
-
-            if(in_array($class_type->code, ['J', 'P', 'S']) ){
-                $d['t1'] = $t1 = $mks['t1_'.$mk->id];
-                $d['t2'] = $t2 = $mks['t2_'.$mk->id];
-                $d['t3'] = $t3 = $mks['t3_'.$mk->id];
-                $d['tca'] = $tca = $t1 + $t2 + $t3;
-                $d['exm'] = $exm = $mks['exm_'.$mk->id];
-            }
-
-            if($class_type->code == 'N'){
+            if(in_array($class_type->code, ['BCA' || 'BBA' || 'BCom']) ){
                 $d['t1'] = $tca = $d['tca'] = $mks['t1_'.$mk->id];
                 $d['exm'] = $exm = $mks['exm_'.$mk->id];
             }

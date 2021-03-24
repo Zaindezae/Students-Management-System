@@ -296,12 +296,9 @@ class Qs
     public static function getMarkType($class_type)
     {
        switch($class_type){
-           case 'J' : return 'junior';
-           case 'S' : return 'senior';
-           case 'N' : return 'nursery';
-           case 'P' : return 'primary';
-           case 'PN' : return 'pre_nursery';
-           case 'C' : return 'creche';
+           case 'BCA' : return 'Bachelor of Computer Applications';
+           case 'BBA' : return 'Bachelor of Business Administration';
+           case 'BCom' : return 'Bachelor of Commerce';
        }
         return $class_type;
     }
