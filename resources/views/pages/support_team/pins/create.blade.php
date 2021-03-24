@@ -1,9 +1,9 @@
-@extends('layouts.master')
+{{-- @extends('layouts.master')
 @section('page_title', 'Generate Pins')
 @section('content')
-    <div class="card">
-        <div class="card-header header-elements-inline">
-            <h5 class="card-title"><i class="icon-alarm mr-2"></i> Generate Pins</h5>
+    <div class="card"> --}}
+        {{-- <div class="card-header header-elements-inline"> --}}
+            {{-- <h5 class="card-title"><i class="icon-alarm mr-2"></i> Generate Pins</h5>
             {!! Qs::getPanelOptions() !!}
         </div>
 
@@ -26,4 +26,4 @@
             </div>
         </div>
     </div>
-@endsection
+@endsection --}}

@@ -1,44 +1,44 @@
-@extends('layouts.master')
-@section('page_title', 'Exam Pins')
-@section('content')
-
-    <div class="card">
-        <div class="card-header header-elements-inline">
-            <h6 class="card-title">Exam Pins</h6>
-            {!! Qs::getPanelOptions() !!}
-        </div>
-
-        <div class="card-body">
-            <ul class="nav nav-tabs nav-tabs-highlight">
-                <li class="nav-item"><a href="#valid-pins" class="nav-link active" data-toggle="tab">Valid Pins</a></li>
-                <li class="nav-item"><a href="#used-pins" class="nav-link" data-toggle="tab"> Used Pins</a></li>
-            </ul>
-
-            <div class="tab-content">
-
-                <div class="tab-pane fade show active" id="valid-pins">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="text-center alert alert-info border-0 alert-dismissible">
-                                <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
-
-                                <span>There are <strong>{{ $pin_count }}</strong> valid pins that have not been used</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    @foreach($valid_pins->chunk(4) as $chunk)
-                        <div class="row">
-                            @foreach($chunk as $vp)
-                                <div class="col-md-3">{{ $vp->code }}</div>
-                            @endforeach
-                        </div>
-                    @endforeach
-
-                </div>
-
-                {{--Used Pins--}}
-                <div class="tab-pane fade" id="used-pins">
+{{-- @extends('layouts.master') --}}
+{{-- @section('page_title', 'Exam Pins') --}}
+{{-- @section('content') --}}
+{{--  --}}
+{{-- <div class="card"> --}}
+{{-- <div class="card-header header-elements-inline"> --}}
+{{-- <h6 class="card-title">Exam Pins</h6> --}}
+{{-- {!! Qs::getPanelOptions() !!} --}}
+{{-- </div> --}}
+{{--  --}}
+{{-- <div class="card-body"> --}}
+{{-- <ul class="nav nav-tabs nav-tabs-highlight"> --}}
+{{-- <li class="nav-item"><a href="#valid-pins" class="nav-link active" data-toggle="tab">Valid Pins</a></li> --}}
+{{-- <li class="nav-item"><a href="#used-pins" class="nav-link" data-toggle="tab"> Used Pins</a></li> --}}
+{{-- </ul> --}}
+{{--  --}}
+{{-- <div class="tab-content"> --}}
+{{--  --}}
+{{-- <div class="tab-pane fade show active" id="valid-pins"> --}}
+{{-- <div class="row"> --}}
+{{-- <div class="col-md-12"> --}}
+{{-- <div class="text-center alert alert-info border-0 alert-dismissible"> --}}
+{{-- <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button> --}}
+{{--  --}}
+{{-- <span>There are <strong>{{ $pin_count }}</strong> valid pins that have not been used</span> --}}
+{{-- </div> --}}
+{{-- </div> --}}
+{{-- </div> --}}
+{{--  --}}
+{{-- @foreach ($valid_pins->chunk(4) as $chunk) --}}
+{{-- <div class="row"> --}}
+{{-- @foreach ($chunk as $vp) --}}
+{{-- <div class="col-md-3">{{ $vp->code }}</div> --}}
+{{-- @endforeach --}}
+{{-- </div> --}}
+{{-- @endforeach --}}
+{{--  --}}
+{{-- </div> --}}
+{{--  --}}
+{{-- Used Pins --}}
+{{-- <div class="tab-pane fade" id="used-pins">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="alert alert-info border-0 alert-dismissible">
@@ -68,7 +68,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($used_pins as $up)
+                                @foreach ($used_pins as $up)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $up->code }}</td>
@@ -82,12 +82,11 @@
                             </table>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-            </div>
-        </div>
-    </div>
+{{-- </div> --}}
+{{-- </div>
+    </div> --}}
 
-    {{--Pins List Ends--}}
-
-@endsection
+{{-- Pins List Ends --}}
+{{-- @endsection --}}

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+{{-- @extends('layouts.master')
 @section('page_title', 'Enter PIN')
 @section('content')
     <div class="card">
@@ -26,4 +26,4 @@
             </div>
         </div>
     </div>
-@endsection
+@endsection --}}
