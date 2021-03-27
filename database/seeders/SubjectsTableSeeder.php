@@ -1,7 +1,9 @@
 <?php
 namespace Database\Seeders;
 
+use App\Http\Middleware\Custom\Teacher;
 use App\Models\MyClass;
+use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -17,28 +19,29 @@ class SubjectsTableSeeder extends Seeder
     {
         DB::table('subjects')->delete();
         $c = MyClass::pluck('id')->all();
+        $t = User::where('user_type', 'teacher')->pluck('id')->all();
 
         $data = [
-            ['name' => 'C++', 'my_class_id' => $c[0],],
-            ['name' => 'Trends in computing', 'my_class_id' => $c[0]],
-            ['name' => 'Knowledge management', 'my_class_id' => $c[1]],
-            ['name' => 'Introduction of network', 'my_class_id' => $c[1]],
-            ['name' => 'Visual programming', 'my_class_id' => $c[1]],
-            ['name' => 'Data analytics', 'my_class_id' => $c[1]],
-            ['name' => 'Data mining', 'my_class_id' => $c[1]],
-            ['name' => 'Software testing', 'my_class_id' => $c[1]],
-            ['name' => 'Value education', 'my_class_id' => $c[2]],
-            ['name' => 'English', 'my_class_id' => $c[2]],
-            ['name' => 'Maths', 'my_class_id' => $c[3]],
-            ['name' => 'Opps', 'my_class_id' => $c[3]],
-            ['name' => 'C', 'my_class_id' => $c[4]],
-            ['name' => 'Data structure', 'my_class_id' => $c[4]],
-            ['name' => 'Database management system', 'my_class_id' => $c[5]],
-            ['name' => 'Java', 'my_class_id' => $c[5]],
-            ['name' => 'Operating system', 'my_class_id' => $c[6]],
-            ['name' => 'Computer network', 'my_class_id' => $c[6]],
-            ['name' => 'Digital electronic', 'my_class_id' => $c[7]],
-            ['name' => 'Introduction to c', 'my_class_id' => $c[7]]
+            ['name' => 'C++', 'my_class_id' => $c[0], 'slug' => 'C++', 'teacher_id' => $t[0]],
+            ['name' => 'Trends in computing', 'my_class_id' => $c[0], 'slug' => 'TC', 'teacher_id' => $t[0]],
+            ['name' => 'Knowledge management', 'my_class_id' => $c[1], 'slug' => 'KM', 'teacher_id' => $t[0]],
+            ['name' => 'Introduction of Network', 'my_class_id' => $c[1], 'slug' => 'IN', 'teacher_id' => $t[0]],
+            ['name' => 'Visual Programming', 'my_class_id' => $c[1], 'slug' => 'VP', 'teacher_id' => $t[0]],
+            ['name' => 'Data Analytics', 'my_class_id' => $c[1], 'slug' => 'DA', 'teacher_id' => $t[0]],
+            ['name' => 'Data Mining', 'my_class_id' => $c[1], 'slug' => 'DM', 'teacher_id' => $t[0]],
+            ['name' => 'Software Testing', 'my_class_id' => $c[1], 'slug' => 'ST', 'teacher_id' => $t[0]],
+            ['name' => 'Value Education', 'my_class_id' => $c[2], 'slug' => 'VE', 'teacher_id' => $t[0]],
+            ['name' => 'English', 'my_class_id' => $c[2], 'slug' => 'E', 'teacher_id' => $t[0]],
+            ['name' => 'Maths', 'my_class_id' => $c[3], 'slug' => 'M', 'teacher_id' => $t[0]],
+            ['name' => 'Opps', 'my_class_id' => $c[3], 'slug' => 'OPPS', 'teacher_id' => $t[0]],
+            ['name' => 'C', 'my_class_id' => $c[4], 'slug' => 'C', 'teacher_id' => $t[0]],
+            ['name' => 'Data Structure', 'my_class_id' => $c[4], 'slug' => 'DS', 'teacher_id' => $t[0]],
+            ['name' => 'Database Management System', 'my_class_id' => $c[5], 'slug' => 'DMS', 'teacher_id' => $t[0]],
+            ['name' => 'Java', 'my_class_id' => $c[5], 'slug' => 'J', 'teacher_id' => $t[0]],
+            ['name' => 'Operating System', 'my_class_id' => $c[6], 'slug' => 'OS', 'teacher_id' => $t[0]],
+            ['name' => 'Computer Network', 'my_class_id' => $c[6], 'slug' => 'CN', 'teacher_id' => $t[0]],
+            ['name' => 'Digital Electronic', 'my_class_id' => $c[7], 'slug' => 'DE', 'teacher_id' => $t[0]],
+            ['name' => 'Introduction to C', 'my_class_id' => $c[7], 'slug' => 'IC', 'teacher_id' => $t[0]]
         ];
 
         DB::table('subjects')->insert($data);
