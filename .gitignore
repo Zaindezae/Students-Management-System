@@ -14,3 +14,5 @@ important
 _ide_helper.php
 storage
 .phpstorm.meta.php
+composer.lock
+package-lock.json
