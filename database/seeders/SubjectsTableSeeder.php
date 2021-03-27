@@ -34,7 +34,7 @@ class SubjectsTableSeeder extends Seeder
             ['name' => 'Value Education', 'my_class_id' => $c[1], 'slug' => 'VE', 'teacher_id' => $t[0]],
             ['name' => 'English', 'my_class_id' => $c[1], 'slug' => 'E', 'teacher_id' => $t[0]],
             ['name' => 'Maths', 'my_class_id' => $c[1], 'slug' => 'M', 'teacher_id' => $t[0]],
-            ['name' => 'Introduction to C', 'my_class_id' => $c[1], 'slug' => 'IC', 'teacher_id' => $t[0]]
+            ['name' => 'Introduction to C', 'my_class_id' => $c[1], 'slug' => 'IC', 'teacher_id' => $t[0]],
             ['name' => 'Opps', 'my_class_id' => $c[1], 'slug' => 'OPPS', 'teacher_id' => $t[0]],
             ['name' => 'C', 'my_class_id' => $c[2], 'slug' => 'C', 'teacher_id' => $t[0]],
             ['name' => 'Data Structure', 'my_class_id' => $c[2], 'slug' => 'DS', 'teacher_id' => $t[0]],
